@@ -18,7 +18,7 @@ class Enemy {
 
   die() {
     this.position = '?';
-    console.log('Помянем вражину');
+    console.log('Помянем вражину🙏');
   }
 }
 
