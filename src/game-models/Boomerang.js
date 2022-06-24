@@ -14,8 +14,9 @@ class Boomerang {
   }
 
   moveLeft() {
-    // Идём влево.
-    this.position -= 1;
+    setInterval(() => {
+      this.position -= 1;
+    }, 25)
   }
 
   moveRight() {
