@@ -1,23 +1,31 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Enemies', {
+    await queryInterface.createTable('Sessions', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      health: {
+      time: {
         type: Sequelize.INTEGER,
       },
-      speed: {
+      score: {
         type: Sequelize.INTEGER,
       },
-      bonus_score: {
+      user_id: {
         type: Sequelize.INTEGER,
+        references: {
+          model: 'Users',
+          key: 'id',
+        },
       },
-      statistic_id: {
+      enemy_id: {
         type: Sequelize.INTEGER,
+        references: {
+          model: 'Enemies',
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,
@@ -30,6 +38,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Enemies');
+    await queryInterface.dropTable('Sessions');
   },
 };
