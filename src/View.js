@@ -29,7 +29,7 @@ class View {
   }
 
   render(track) {
-    const yourTeamName = 'Elbrus';
+    const yourTeamName = 'Command';
 
     // Тут всё рисуем.
     console.clear();
