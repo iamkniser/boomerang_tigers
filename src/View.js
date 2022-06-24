@@ -4,11 +4,11 @@ const style1 = {
   font: 'block', // define the font face
   align: 'center', // define text alignment
   background: 'transparent', // define the background color, you can also use `backgroundColor` here as key
-  letterSpacing: 1, // define letter spacing
+  letterSpacing: 4, // define letter spacing
   lineHeight: 1, // define the line height
   space: true, // define if the output text should have empty lines on top and on the bottom
   maxLength: '0', // define how many character can be on one line
-  gradient: 'yellow,black', // define your two gradient colors
+  gradient: 'yellow,cyan', // define your two gradient colors
 };
 const style2 = {
   font: 'block', // define the font face
@@ -18,7 +18,7 @@ const style2 = {
   lineHeight: 1, // define the line height
   space: true, // define if the output text should have empty lines on top and on the bottom
   maxLength: '0', // define how many character can be on one line
-  gradient: 'orange', // define your two gradient colors
+  gradient: 'magenta,yellow', // define your two gradient colors
 };
 
 // Сделаем отдельный класс для отображения игры в консоли.
@@ -66,7 +66,7 @@ class View {
     console.log('\n');
     console.log(`${' '.repeat(89)}ENEMIES KILLED: ${this.hero.countDie}`);
 
-    cfonts.say(`Created by "${yourTeamName}" with love`, style2);
+    cfonts.say('Created by "fettuccine" with love', style2);
   }
 }
 
