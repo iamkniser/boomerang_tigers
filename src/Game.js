@@ -10,8 +10,8 @@ const Keyboard = require('./keyboard');
 const {
   popal,
   smert,
-  wavFlyBoomerang,
-  wavMainTheme,
+  letit,
+  MainTheme,
 } = require('./Audio')
 
 
@@ -48,7 +48,7 @@ class Game {
     if (this.boomerang.position >= this.enemy.position) {
       this.enemy.die();
       popal();
-      this.hero.countEnemyDie()    //СОГЛАСОВАТЬ НАЗВАНИЕ С ДАМИРОМ
+      this.hero.countEnemyDie()    
       this.enemy = new Enemy({ position: this.trackLength - 5 });
       this.track[this.enemy.position] = this.enemy.skin;
       this.boomerang.moveLeft();
@@ -60,9 +60,9 @@ class Game {
   }
 
   play() {
-    wavMainTheme();
+    MainTheme();
     this.keyboard.runInteractiveConsole()
-    let start = new Date() 
+    // let start = new Date() 
     setInterval(() => {
       //счетчик времени // let start = new Date()  if(this.hero.die() let end = new Date() const time = end - start * 1000 = 
       // Let's play!
@@ -71,10 +71,10 @@ class Game {
       this.view.render(this.track);
       this.enemy.moveLeft();
     }, 100);
-    if(this.hero.die()){ 
-      let end = new Date()
-     this.time = end.getTime() - start.getTime()
-  }
+  //   if(this.hero.die()){ 
+  //     let end = new Date()
+  //    this.time = end.getTime() - start.getTime()
+  // }
 }
 }
 
