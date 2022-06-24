@@ -2,7 +2,7 @@
 
 class Hero {
   constructor({ position, countDie = 0 }) {
-    this.skin = '🤠'; // можете использовать любые emoji '💃'
+    this.skin = '💃'; // можете использовать любые emoji '💃'
     this.position = position;
     this.countDie = countDie
   }
@@ -24,7 +24,7 @@ class Hero {
 
   die() {
     this.skin = '💀';
-    console.log('YOU ARE DEAD!💀');
+    console.log('💀 W A S T E D 💀');
     process.exit();
   }
 
