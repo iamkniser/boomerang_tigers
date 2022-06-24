@@ -4,7 +4,7 @@
 
 class Boomerang {
   constructor() {
-    this.skin = '🌀';
+    this.skin = '🚽';
     this.position = 0;
   }
 
@@ -14,13 +14,15 @@ class Boomerang {
   }
 
   moveLeft() {
-    // Идём влево.
-    this.position -= 1;
+    setInterval(() => {
+      this.position -= 1;
+    }, 25)
   }
 
   moveRight() {
-    // Идём вправо.
-    this.position += 1;
+    setInterval(() => {
+      this.position += 1;
+    }, 25)
   }
 }
 
