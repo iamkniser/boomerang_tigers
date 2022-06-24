@@ -1,14 +1,72 @@
-// Сделаем отдельный класс для отображения игры в консоли.
+const cfonts = require('cfonts');
 
+const style1 = {
+  font: 'block', // define the font face
+  align: 'center', // define text alignment
+  background: 'transparent', // define the background color, you can also use `backgroundColor` here as key
+  letterSpacing: 4, // define letter spacing
+  lineHeight: 1, // define the line height
+  space: true, // define if the output text should have empty lines on top and on the bottom
+  maxLength: '0', // define how many character can be on one line
+  gradient: 'yellow,cyan', // define your two gradient colors
+};
+const style2 = {
+  font: 'block', // define the font face
+  align: 'center', // define text alignment
+  background: 'transparent', // define the background color, you can also use `backgroundColor` here as key
+  letterSpacing: 1, // define letter spacing
+  lineHeight: 1, // define the line height
+  space: true, // define if the output text should have empty lines on top and on the bottom
+  maxLength: '0', // define how many character can be on one line
+  gradient: 'magenta,yellow', // define your two gradient colors
+};
+
+// Сделаем отдельный класс для отображения игры в консоли.
 class View {
-  render() {
-    const yourTeamName = 'Elbrus';
+  constructor({ track, hero }) {
+    this.track = track;
+    this.hero = hero;
+  }
+
+  render(track) {
+    const yourTeamName = 'Command';
 
     // Тут всё рисуем.
     console.clear();
-    console.log(this.game.track.join(''));
-    console.log('\n\n');
-    console.log(`Created by "${yourTeamName}" with love`);
+    cfonts.say('BOOMERANG', style1);
+    console.log(`${' '.repeat(88)}${'🟪'.repeat(53)}`);
+
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${track.join('')}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+    console.log(`${' '.repeat(88)}🟪${' '.repeat(102)}🟪`);
+
+    console.log(`${' '.repeat(88)}${'🟪'.repeat(53)}`);
+    console.log('\n');
+    console.log(`${' '.repeat(89)}ENEMIES KILLED: ${this.hero.countDie}`);
+
+    cfonts.say('Created by "fettuccine" with love', style2);
   }
 }
 
