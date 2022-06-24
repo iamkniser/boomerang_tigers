@@ -4,7 +4,7 @@ class Hero {
   constructor({ position, countDie = 0 }) {
     this.skin = '💃'; // можете использовать любые emoji '💃'
     this.position = position;
-    this.countDie = countDie
+    this.countDie = countDie;
   }
 
   moveLeft() {
@@ -28,8 +28,8 @@ class Hero {
     process.exit();
   }
 
-  countEnemyDie(){
-    this.countDie +=1
+  countEnemyDie() {
+    this.countDie += 1;
   }
 }
 
