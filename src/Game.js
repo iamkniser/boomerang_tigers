@@ -48,7 +48,7 @@ class Game {
     if (this.boomerang.position >= this.enemy.position) {
       this.enemy.die();
       popal();
-      this.hero.countDie()    //СОГЛАСОВАТЬ НАЗВАНИЕ С ДАМИРОМ
+      this.hero.countEnemyDie()    //СОГЛАСОВАТЬ НАЗВАНИЕ С ДАМИРОМ
       this.enemy = new Enemy({ position: this.trackLength - 5 });
       this.track[this.enemy.position] = this.enemy.skin;
       this.boomerang.moveLeft();

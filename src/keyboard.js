@@ -24,7 +24,6 @@ class Keyboard {
       },
     }
   }
-}
 // Какая-то функция.
 
  runInteractiveConsole() {
@@ -43,6 +42,7 @@ class Keyboard {
     });
     process.stdin.setRawMode(true);
   }
+}
 
 // Давай попробуем запустить этот скрипт!
 

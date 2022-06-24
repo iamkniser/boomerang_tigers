@@ -25,7 +25,7 @@ async function smert() {
 
 module.exports = {
   popal,
-  smert
+  smert,
   wavFlyBoomerang,
   wavMainTheme,
 };
