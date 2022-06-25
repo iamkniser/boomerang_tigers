@@ -22,14 +22,14 @@ class Boomerang {
   moveLeft() {
     setInterval(() => {
       this.position -= 1;
-    }, 25)
+    }, 25);
   }
 
   moveRight() {
     letit();
     setInterval(() => {
       this.position += 1;
-    }, 25)
+    }, 25);
   }
 }
 
