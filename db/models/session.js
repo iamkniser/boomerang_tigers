@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     score: DataTypes.INTEGER,
     time: DataTypes.TEXT,
     user_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER, //
       references: {
         model: 'Users',
         key: 'id',
